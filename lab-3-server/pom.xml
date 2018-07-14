@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>edu.ka.springcloud</groupId>
-	<artifactId>springcloud-lab3</artifactId>
+	<artifactId>lab-3-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>springcloud-lab3</name>
+	<name>lab-3-server</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
