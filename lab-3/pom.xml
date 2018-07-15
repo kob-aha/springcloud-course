@@ -41,30 +41,18 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<groupId>com.spotify</groupId>
-					<artifactId>dockerfile-maven-plugin</artifactId>
-					<version>${dockerfile-maven-version}</version>
+					<groupId>io.fabric8</groupId>
+					<artifactId>docker-maven-plugin</artifactId>
+					<version>0.26.0</version>
 					<executions>
 						<execution>
-							<id>default</id>
+							<phase>package</phase>
 							<goals>
 								<goal>build</goal>
-								<goal>push</goal>
+								<goal>save</goal>
 							</goals>
 						</execution>
 					</executions>
-					<configuration>
-						<!--<repository>spotify/foobar</repository>-->
-						<tag>${project.version}</tag>
-						<buildArgs>
-							<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
-						</buildArgs>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-dependency-plugin</artifactId>
-					<version>3.1.1</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
