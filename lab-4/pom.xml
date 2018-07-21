@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>lab-3-parent</artifactId>
+	<artifactId>lab-4-parent</artifactId>
 	<packaging>pom</packaging>
 
-	<name>lab-3</name>
+	<name>lab-4</name>
 	<description>Demo project for Spring Cloud Config</description>
 
 	<parent>
@@ -16,29 +16,8 @@
 		<relativePath>../super-pom</relativePath>
 	</parent>
 
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>io.fabric8</groupId>
-					<artifactId>docker-maven-plugin</artifactId>
-					<version>0.26.0</version>
-					<executions>
-						<execution>
-							<phase>package</phase>
-							<goals>
-								<goal>build</goal>
-								<goal>save</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
-
-	<modules>
+	<!--modules>
 		<module>server</module>
 		<module>client</module>
-	</modules>
+	</modules-->
 </project>

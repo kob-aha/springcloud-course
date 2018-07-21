@@ -65,6 +65,26 @@
 					</images>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.1.1</version>
+				<executions>
+					<execution>
+						<id>offline</id>
+						<phase>package</phase>
+						<goals>
+							<goal>go-offline</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<excludeGroupIds>*</excludeGroupIds>
+					<includeGroupIds>io.fabric8</includeGroupIds>
+					<outputAbsoluteArtifactFilename>true</outputAbsoluteArtifactFilename>
+					<outputFile>${project.basedir}/dependencies-output.txt</outputFile>
+				</configuration>
+			</plugin>
 		</plugins>
 
 		<finalName>${project.artifactId}</finalName>
