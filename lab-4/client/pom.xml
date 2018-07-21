@@ -3,21 +3,25 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>lab-4-parent</artifactId>
+	<artifactId>lab-4-client-parent</artifactId>
 	<packaging>pom</packaging>
 
-	<name>lab-4</name>
-	<description>Demo project for Spring Cloud Config</description>
+	<name>lab-4-client-parent</name>
+	<description>Lab 4 parent module for client module</description>
 
 	<parent>
 		<groupId>edu.ka.springcloud</groupId>
-		<artifactId>super-pom</artifactId>
+		<artifactId>lab-4-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../super-pom</relativePath>
+		<relativePath>..</relativePath>
 	</parent>
 
 	<modules>
-		<module>eureka-server</module>
-		<module>client</module>
+		<module>subject</module>
+		<module>article</module>
+		<module>adjective</module>
+		<module>noun</module>
+		<module>verb</module>
+		<module>sentence</module>
 	</modules>
 </project>
