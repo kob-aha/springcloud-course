@@ -23,15 +23,15 @@
 					<groupId>io.fabric8</groupId>
 					<artifactId>docker-maven-plugin</artifactId>
 					<version>0.26.0</version>
-					<executions>
-						<execution>
-							<phase>package</phase>
-							<goals>
-								<goal>build</goal>
-								<goal>save</goal>
-							</goals>
-						</execution>
-					</executions>
+					<!--<executions>-->
+						<!--<execution>-->
+							<!--<phase>package</phase>-->
+							<!--<goals>-->
+								<!--<goal>build</goal>-->
+								<!--<goal>save</goal>-->
+							<!--</goals>-->
+						<!--</execution>-->
+					<!--</executions>-->
 				</plugin>
 			</plugins>
 		</pluginManagement>
