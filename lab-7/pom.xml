@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>lab-7-parent</artifactId>
+	<packaging>pom</packaging>
+
+	<name>lab-7</name>
+	<description>Demo project for Spring Cloud Config</description>
+
+	<parent>
+		<groupId>edu.ka.springcloud</groupId>
+		<artifactId>super-pom</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../super-pom</relativePath>
+	</parent>
+
+	<modules>
+		<module>sentence-server</module>
+		<module>word-server</module>
+	</modules>
+</project>
