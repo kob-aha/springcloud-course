@@ -4,12 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.test</groupId>
-	<artifactId>lab-8-config-server</artifactId>
-	<!--<version>1</version>-->
+	<artifactId>lab-8-client</artifactId>
 	<packaging>jar</packaging>
 
-	<name>lab-8-config-server</name>
-	<description>Demo project for Spring Cloud Config server</description>
+	<name>lab-8-client</name>
+	<description>Demo project for Spring Cloud client</description>
 
 	<parent>
 		<groupId>edu.ka.springcloud</groupId>
@@ -24,7 +23,17 @@
 		<java.version>1.8</java.version>
 	</properties>
 
-   	<dependencies>
+	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -32,31 +41,22 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-server</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Spring Team seems to have forgotten about this dependency, needed to run test: -->
-		<dependency>
-			<groupId>com.jcraft</groupId>
-			<artifactId>jsch</artifactId>
-		</dependency>
-
 		<!-- Allow for automatic restarts when classpath contents change. -->
-		<!-- Inclusion of DevTools here causes a large amount of extraneous log output. -->
-<!-- 	    
-		<dependency>
-	        <groupId>org.springframework.boot</groupId>
-	        <artifactId>spring-boot-devtools</artifactId>
-	        <optional>true</optional>
-	    </dependency> 
--->
+	    <!--<dependency>-->
+	        <!--<groupId>org.springframework.boot</groupId>-->
+	        <!--<artifactId>spring-boot-devtools</artifactId>-->
+	        <!--<optional>true</optional>-->
+	    <!--</dependency>-->
 	</dependencies>
 	
 	<build>
