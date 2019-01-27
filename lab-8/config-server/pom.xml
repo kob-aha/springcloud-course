@@ -4,15 +4,16 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.test</groupId>
-	<artifactId>lab-6-sentence-server</artifactId>
+	<artifactId>lab-8-config-server</artifactId>
+	<!--<version>1</version>-->
 	<packaging>jar</packaging>
 
-	<name>lab-6-sentence-server</name>
-	<description>Example microservice which assembles a sentence from words served by other services.</description>
+	<name>lab-8-config-server</name>
+	<description>Demo project for Spring Cloud Config server</description>
 
 	<parent>
 		<groupId>edu.ka.springcloud</groupId>
-		<artifactId>lab-6-parent</artifactId>
+		<artifactId>lab-8-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
@@ -37,37 +38,21 @@
         <!--</dependencies>-->
     <!--</dependencyManagement>-->
     
-	<dependencies>
-	
-		<!-- Needed since 1.0.2 -->
+   	<dependencies>
+
 		<dependency>
-        	<groupId>org.springframework.cloud</groupId>
-        	<artifactId>spring-cloud-starter-config</artifactId>
-    	</dependency>
-    		
-	    <dependency>
-	        <groupId>org.springframework.cloud</groupId>
-	        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-	    </dependency>
-	
-	    <dependency>
-	        <groupId>org.springframework.cloud</groupId>
-	        <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-	    </dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-actuator</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<artifactId>pring-cloud-starter-bus-amqp</artifactId>
 		</dependency>
-	
+
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
 		
 		<dependency>
@@ -76,12 +61,21 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- Spring Team seems to have forgotten about this dependency, needed to run test: -->
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+		</dependency>
+
 		<!-- Allow for automatic restarts when classpath contents change. -->
-	    <dependency>
+		<!-- Inclusion of DevTools here causes a large amount of extraneous log output. -->
+<!-- 	    
+		<dependency>
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-devtools</artifactId>
 	        <optional>true</optional>
-	    </dependency>
+	    </dependency> 
+-->
 	</dependencies>
 	
 	<build>
